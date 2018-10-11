@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="391.0" prefWidth="502.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculadora11.FXMLDocumentController">
+   <children>
+      <ImageView fx:id="img" fitHeight="622.0" fitWidth="599.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@fundo2.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="painel" layoutX="5.0" prefHeight="68.0" prefWidth="589.0" style="-fx-background-color: #566F7F;" />
+      <Label fx:id="histo" layoutX="427.0" layoutY="2.0" text="Historico">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="calc" layoutX="11.0" layoutY="4.0" text="Calculadora">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <Separator fx:id="sepa" layoutX="297.0" layoutY="-2.0" orientation="VERTICAL" prefHeight="200.0" />
+      <Separator fx:id="sepa2" layoutX="297.0" layoutY="198.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="6.0" />
+      <Label fx:id="copy" layoutX="129.0" layoutY="398.0" prefHeight="21.0" prefWidth="340.0" text="©2018 Copyright, todos os direitos reservados ">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnsoma" buttonType="RAISED" layoutX="35.0" layoutY="206.0" onAction="#soma" style="-fx-background-color: #000000;" text="+" textFill="RED">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <ripplerFill>
+            <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="0.30000000000000004" startX="0.23809523809523808" startY="0.7333333333333334">
+               <stops>
+                  <Stop color="#aeaeae" />
+                  <Stop color="#aeaeae" offset="0.007662835249042145" />
+                  <Stop color="#000dff" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+      </JFXButton>
+      <JFXButton fx:id="btnsub" buttonType="RAISED" layoutX="97.0" layoutY="206.0" onAction="#subtrair" style="-fx-background-color: #000000;" text="-" textFill="RED">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <ripplerFill>
+            <LinearGradient cycleMethod="REFLECT" endX="0.5857142857142856" endY="0.5095238095238095" startX="1.0">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="#000dff" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+      </JFXButton>
+      <JFXButton fx:id="btndivisao" buttonType="RAISED" layoutX="215.0" layoutY="206.0" onAction="#dividir" style="-fx-background-color: #000000;" text="/" textFill="RED">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <ripplerFill>
+            <LinearGradient cycleMethod="REFLECT" endX="0.26190476190476186" endY="1.0" startX="0.0714285714285714" startY="0.13809523809523805">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="#1100ff" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+      </JFXButton>
+      <JFXButton fx:id="btnmulti" buttonType="RAISED" layoutX="156.0" layoutY="206.0" onAction="#multiplicar" style="-fx-background-color: #000000;" text="*" textFill="RED">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <ripplerFill>
+            <LinearGradient cycleMethod="REFLECT" endX="0.2571428571428572" endY="0.7952380952380953" startX="1.0" startY="0.05714285714285714">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="#000dff" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+      </JFXButton>
+      <JFXButton fx:id="btnlimpar" buttonType="RAISED" layoutX="94.0" layoutY="298.0" onAction="#limpar" style="-fx-background-color: #000000;" text="Limpar" textFill="RED">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <ripplerFill>
+            <LinearGradient cycleMethod="REFLECT" endX="0.24761904761904763" endY="0.5428571428571429" startX="0.7714285714285715">
+               <stops>
+                  <Stop color="#d7d7d7" />
+                  <Stop color="#000dff" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+      </JFXButton>
+      <TextField fx:id="txt1" layoutX="14.0" layoutY="75.0" prefHeight="47.0" prefWidth="124.0" />
+      <TextField fx:id="txt2" layoutX="146.0" layoutY="75.0" prefHeight="47.0" prefWidth="137.0" />
+      <Label fx:id="resultado" layoutX="126.0" layoutY="141.0" prefHeight="40.0" prefWidth="117.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Label>
+      <Label fx:id="historic" layoutX="308.0" layoutY="74.0" prefHeight="77.0" prefWidth="275.0">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnmostrar" buttonType="RAISED" layoutX="392.0" layoutY="298.0" onAction="#mostrar" style="-fx-background-color: #000000;" text="Mostar" textFill="RED">
+         <ripplerFill>
+            <LinearGradient cycleMethod="REFLECT" endX="0.3047619047619048" endY="0.7666666666666666" startX="0.7380952380952381" startY="0.21428571428571427">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="BLUE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

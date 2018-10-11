@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="286.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculadora11.LoguinController">
+   <children>
+      <ImageView fitHeight="333.0" fitWidth="600.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@fundo.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="217.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icone.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="login" focusColor="#003cff" layoutX="232.0" layoutY="179.0" prefHeight="25.0" prefWidth="135.0" unFocusColor="WHITE" />
+      <JFXTextField fx:id="senha" layoutX="232.0" layoutY="233.0" prefHeight="25.0" prefWidth="135.0" unFocusColor="WHITE" />
+      <Label fx:id="user" layoutX="166.0" layoutY="182.0" text="User:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="pass" layoutX="113.0" layoutY="233.0" text="Password:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnlogar" layoutX="246.0" layoutY="265.0" onAction="#logar" text="Logar">
+         <textFill>
+            <LinearGradient cycleMethod="REFLECT" endX="0.5476190476190477" endY="0.45238095238095233" startX="0.19523809523809524" startY="0.7523809523809524">
+               <stops>
+                  <Stop color="#c20000" />
+                  <Stop color="#ff5100" offset="0.32780345222577667" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
